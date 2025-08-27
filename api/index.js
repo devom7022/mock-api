@@ -1,11 +1,15 @@
+const path = require("path");
 const express = require("express");
 const jsonServer = require("json-server");
 
 const app = express();
-const router = jsonServer.router("db.json");
+
+// db.json está en la RAÍZ del repo, subimos un nivel desde /api
+const dbPath = path.join(__dirname, "..", "db.json");
+
+const router = jsonServer.router(dbPath);
 const middlewares = jsonServer.defaults();
 
-// Aumenta límite para base64
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(middlewares);
@@ -35,8 +39,8 @@ app.post("/guardar", (req, res) => {
   res.status(200).json(resp);
 });
 
-// Rutas GET auto-generadas por json-server: /api/sucursal, /api/incidentes, etc.
+// Rutas GET auto de json-server: /api/sucursal, /api/incidentes, etc.
 app.use(router);
 
-// No app.listen en Vercel — exporta el app
+// No app.listen en Vercel: exportar el app
 module.exports = app;
