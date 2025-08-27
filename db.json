@@ -1,0 +1,55 @@
+{
+  "sucursal": {
+    "direccion": "Ave. Revolución #3000 Sur, Esq. Covarrubias",
+    "sucursales": [
+      {
+        "tipo": 1,
+        "nombre": "Sucursal Torre del Sur",
+        "cajeros": [
+          {
+            "id_cajero": "N11351",
+            "incidentes": [
+              { "nombre": "Pantalla rota", "cantidad": 2 },
+              { "nombre": "Teclado sucio", "cantidad": 2 },
+              { "nombre": "Sin dinero", "cantidad": 1 }
+            ]
+          },
+          { "id_cajero": "N11352", "incidentes": [] },
+          { "id_cajero": "N11353", "incidentes": [] },
+          { "id_cajero": "N11440", "incidentes": [] },
+          { "id_cajero": "N11441", "incidentes": [] }
+        ]
+      }
+    ]
+  },
+  "incidentes": {
+    "responseCode": 200,
+    "descripcion": "Operacion exitosa",
+    "resultado": [
+      {
+        "fecha": "2025-07-16T12:30:29",
+        "comentarios": "Remedy: TERMINADO - Se valida atm dotado, en línea y servicio ultima disposición 12:30"
+      },
+      {
+        "fecha": "2025-07-16T12:30:29",
+        "comentarios": "Cambio de estatus: CERRADO"
+      },
+      {
+        "fecha": "2025-07-16T12:30:01",
+        "comentarios": "Remedy: Servicios bancarios informa de dotara atm el dia 16-07-2025 a las 12:30"
+      },
+      {
+        "fecha": "2025-07-16T12:29:24",
+        "comentarios": "Remedy: EN ATENCION - Se canaliza evento con servicios bancarios para dotacion"
+      },
+      {
+        "fecha": "2025-07-16T12:29:24",
+        "comentarios": "Cambio de estatus: EN PROCESO"
+      },
+      {
+        "fecha": "2025-07-16T11:44:12",
+        "comentarios": "Ticket creado desde la app móvil."
+      }
+    ]
+  }
+}
